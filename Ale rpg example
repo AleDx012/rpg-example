@@ -1,31 +1,4 @@
-  GNU nano 7.2                                                                                           text                                                                                           Modified
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                                                                       text                                                                                         
 
 #include <iostream>
 
@@ -36,7 +9,7 @@ struct Personaje {
     int defensa;
 };
 
-void turnoDeAtaque(Personaje& atacante, Personaje& defensor) {
+void Ataque(Personaje& atacante, Personaje& defensor) {
     int daño = atacante.fuerza - defensor.defensa;
     defensor.salud -= daño > 0 ? daño : 0;
     std::cout << atacante.nombre << " apuñala a " << defensor.nombre << "." << std::endl;
@@ -52,9 +25,9 @@ int main() {
     std::cout << std::endl;
 
     while (jugador1.salud > 0 && jugador2.salud > 0) {
-        turnoDeAtaque(jugador1, jugador2);
+  Ataque(jugador1, jugador2);
         if (jugador2.salud <= 0) break;
-        turnoDeAtaque(jugador2, jugador1);
+  Ataque(jugador2, jugador1);
         if (jugador1.salud <= 0) break;
         std::cout << std::endl;
     }
