@@ -40,6 +40,8 @@ int main() {
         std::cout << jugador1.nombre << " ha ganado la pelea!" << std::endl;
     }
 
-    return 0;
+    return 0
 }
+psdt:
 
+estoy bien mal creo pipipipipi
